@@ -1,0 +1,53 @@
+<p>employ-reactive works!</p>
+<form [formGroup]="employForm" (ngSubmit)="onFormSubmit()">
+    Employ No : 
+    <input formControlName="empno">
+    <div *ngIf="employForm.get('empno').invalid &&
+    isValidFormSubmitted != null && 
+    !isValidFormSubmitted"> 
+    Employ Number required. 
+    </div>
+    <br/>
+    Employ Name : 
+    <input formControlName="name">
+    <div *ngIf="employForm.get('name').invalid &&
+    isValidFormSubmitted != null && 
+    !isValidFormSubmitted"> 
+    Employ name required. 
+    </div>
+    <br/> 
+    Employ Department : 
+    <input formControlName="dept">
+    <div *ngIf="employForm.get('dept').invalid &&
+    isValidFormSubmitted != null && 
+    !isValidFormSubmitted"> 
+    Employ department required. 
+    </div>
+    <br/> 
+    Employ Designation : 
+    <input formControlName="desig">
+    <div *ngIf="employForm.get('desig').invalid &&
+    isValidFormSubmitted != null && 
+    !isValidFormSubmitted"> 
+    Employ designation required. 
+    </div>
+    <br/>
+    Employ Designation : 
+    <input formControlName="desig">
+    <div *ngIf="employForm.get('desig').invalid &&
+    isValidFormSubmitted != null && 
+    !isValidFormSubmitted"> 
+    Employ designation required. 
+    </div>
+    <br/>
+    Employ Basic : 
+    <input formControlName="basic">
+    <div *ngIf="employForm.get('basic').invalid &&
+    isValidFormSubmitted != null && 
+    !isValidFormSubmitted"> 
+    Employ designation required. 
+    </div>    
+    <br/>
+    <input type="submit" value="Insert" />
+    {{msg}}
+</form>
